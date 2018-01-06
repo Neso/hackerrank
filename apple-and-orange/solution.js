@@ -35,7 +35,7 @@ function appleAndOrange(s, t, a, b, apple, orange) {
 function calculateIfOnHouse(tree, list, s, t) {
     var fruitOnHouse = 0;
     for (var fruitId = list.length; fruitId >= 0; fruitId--) {
-        if (tree + list[fruitId] > s && tree + list[fruitId] < t) {
+        if (tree + list[fruitId] >= s && tree + list[fruitId] <= t) {
             fruitOnHouse++;
         }
     }
@@ -58,7 +58,7 @@ function main() {
     orange = readLine().split(' ');
     orange = orange.map(Number);
     var result = appleAndOrange(s, t, a, b, apple, orange);
-    console.log(result.join("\n"));
+    //console.log(result.join("\n"));
 
 
 
