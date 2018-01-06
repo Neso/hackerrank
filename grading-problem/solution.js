@@ -24,13 +24,15 @@ function solve(grades) {
     // Complete this function
     var result
 
-    for (var gradeId = grades.length - 1; gradeId >= 0; gradeId--) {
-        if (grades[gradeId] <= 40) {
+    for (var gradeId = 0; gradeId < grades.length; gradeId++) {
+        if (grades[gradeId] < 37) {
             console.log(grades[gradeId]);
         } else if (grades[gradeId] % 5 >= 3) {
             //added plus one to round it up
-            result = grades[gradeId] / 5 + 1;
+            result = Math.floor(grades[gradeId] / 5) + 1;
             console.log(result * 5);
+        } else {
+            console.log(grades[gradeId]);
         }
     }
 }
@@ -42,7 +44,7 @@ function main() {
        grades[grades_i] = parseInt(readLine());
     }
     var result = solve(grades);
-    console.log(result.join("\n"));
+    //console.log(result.join("\n"));
 
 
 
