@@ -2,7 +2,7 @@
 * @Author: Nenad
 * @Date:   2018-01-29 00:37:15
 * @Last Modified by:   Nenad
-* @Last Modified time: 2018-01-29 00:37:30
+* @Last Modified time: 2018-01-29 00:51:39
 */
 
 process.stdin.resume();
@@ -27,7 +27,7 @@ function readLine() {
 
 /////////////// ignore above this line ////////////////////
 
-function funnyString(s){
+function funnyString(s) {
     // Complete this function
 
     for (var i = 1; i < s.length; i++) {
