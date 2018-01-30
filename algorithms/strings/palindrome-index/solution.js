@@ -1,8 +1,8 @@
 /*
 * @Author: Nenad
-* @Date:   2018-01-29 01:16:01
+* @Date:   2018-01-30 01:42:45
 * @Last Modified by:   Nenad
-* @Last Modified time: 2018-01-30 01:43:25
+* @Last Modified time: 2018-01-30 01:43:12
 */
 
 process.stdin.resume();
@@ -27,25 +27,29 @@ function readLine() {
 
 /////////////// ignore above this line ////////////////////
 
-function theLoveLetterMystery(s) {
+function palindromeIndex(s){
     // Complete this function
 
-    var diff = 0;
-
-    for (var i = 0; i < s.length / 2; i++) {
+    for (var i = 0; i < s.length; i++) {
         if (s[i] !== s[s.length - 1 - i]) {
-            diff += Math.abs(s.charCodeAt(i) - s.charCodeAt(s.length - 1 - i));
+            if (s[i] === s[s.length - 2 - i] && s[i + 1] === s[s.length - i - 3]) {
+                return s.length - 1 - i;
+            } else if (s[i + 1] === s[s.length - 1 - i]) {
+                return i;
+            } else {
+                //console.log(s[i], s[s.length - 1 - i]);
+            }
         }
     }
 
-    return diff;
+    return -1;
 }
 
 function main() {
     var q = parseInt(readLine());
     for(var a0 = 0; a0 < q; a0++){
         var s = readLine();
-        var result = theLoveLetterMystery(s);
+        var result = palindromeIndex(s);
         process.stdout.write("" + result + "\n");
     }
 
