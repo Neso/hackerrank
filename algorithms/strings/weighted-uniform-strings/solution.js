@@ -2,7 +2,7 @@
 * @Author: Nenad
 * @Date:   2018-02-04 00:12:12
 * @Last Modified by:   Nenad
-* @Last Modified time: 2018-02-04 00:12:31
+* @Last Modified time: 2018-02-04 00:23:39
 */
 
 process.stdin.resume();
@@ -54,7 +54,7 @@ function main() {
         for (var i = 0; i < keys.length; i++) {
             //console.log(a[keys[i]], keys[i].charCodeAt(0) - 96);
 /*a[keys[i]] >= x && */
-            if (x !== 1 && ((keys[i].charCodeAt(0) - 96) * a[keys[i]]) % x === 0) {
+            if (x !== 1 && keys[i] !== "a" && a[keys[i]] * (keys[i].charCodeAt(0) - 96)>= x && (x % (keys[i].charCodeAt(0) - 96)) === 0) {
                 console.log("Yes");
                 test = true;
                 break;
