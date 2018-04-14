@@ -2,7 +2,7 @@
 * @Author: Nenad
 * @Date:   2018-04-12 22:04:20
 * @Last Modified by:   Nenad
-* @Last Modified time: 2018-04-12 22:04:33
+* @Last Modified time: 2018-04-14 13:42:09
 */
 
 process.stdin.resume();
@@ -63,3 +63,4 @@ function main() {
     process.stdout.write("" + result + "\n");
 
 }
+
